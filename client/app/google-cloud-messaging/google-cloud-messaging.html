@@ -1,0 +1,32 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container google-cloud-messaging">
+
+  <div class="row">
+
+    <div class="col-lg-6">
+
+      <h4> Google Cloud Messaging </h4>
+
+      <input ng-model="topic" placeholder="/topic/san-jose"/>
+
+      <textarea ng-model="message" placeholder="message (20-140)" rows="5"></textarea>
+
+      <button ng-click="sendMessage()"> Send Message </button>
+
+      <div ng-class="{'alert' : true, 'alert-success' : data, 'alert-danger' : error}"> {{data || error}} </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+      <p> An attempt to use Google Cloud Messaging failed at Code For India Hackathon 2015, because of the need to make a cross origin resource sharing request via client side code on the browser. Here's how it can be done via the server.  <br/> </br>Investigation pending. </p>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>
